@@ -1,0 +1,165 @@
+/* ===============================
+   ESTILO GENERAL (MODO OSCURO)
+   =============================== */
+body {
+    background-color: #0d0d0d;
+    color: #e6e6e6;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+h1, h2 {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.15);
+    letter-spacing: 1px;
+}
+
+.card {
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+}
+
+.card .display-6 {
+    font-weight: bold;
+}
+
+footer {
+    font-size: 0.9rem;
+}
+
+/* ===============================
+   MODO CLARO
+   =============================== */
+body.claro {
+    background-color: #f8f9fa !important;
+    color: #212529 !important;
+}
+
+/* NAVBAR – MODO CLARO */
+body.claro .navbar {
+    background-color: #ffffff !important;
+    border-bottom: 1px solid #ddd;
+}
+
+body.claro .navbar .nav-link,
+body.claro .navbar-brand {
+    color: #212529 !important;
+}
+
+body.claro .navbar .nav-link.active {
+    color: #0d6efd !important;
+    font-weight: bold;
+}
+
+body.claro #toggleTema {
+    background-color: #ffffff !important;
+    color: #212529 !important;
+    border-color: #212529 !important;
+}
+
+/* FOOTER – MODO CLARO */
+body.claro footer {
+    background-color: #ffffff !important;
+    color: #212529 !important;
+}
+
+/* TARJETAS – MODO CLARO */
+body.claro .card {
+    background-color: #ffffff !important;
+    color: #212529 !important;
+}
+
+body.claro .card p,
+body.claro .card h4,
+body.claro .card small {
+    color: #212529 !important;
+}
+
+/* FORMULARIOS – MODO CLARO */
+body.claro .form-control,
+body.claro .form-select {
+    background-color: #ffffff !important;
+    color: #212529 !important;
+}
+
+/* BOTONES OUTLINE – MODO CLARO */
+body.claro .btn-outline-light {
+    color: #212529 !important;
+    border-color: #212529 !important;
+}
+
+body.claro .btn-outline-light:hover {
+    background-color: #212529 !important;
+    color: #ffffff !important;
+}
+
+/* ===============================
+   NAVBAR – MODO OSCURO
+   =============================== */
+body:not(.claro) .navbar {
+    background-color: #000000 !important;
+    border-bottom: 1px solid #222;
+}
+
+body:not(.claro) .navbar .nav-link,
+body:not(.claro) .navbar-brand {
+    color: #ffffff !important;
+}
+
+body:not(.claro) .navbar .nav-link:hover {
+    color: #ffc107 !important;
+}
+
+body:not(.claro) .navbar .nav-link.active {
+    color: #0dcaf0 !important;
+    font-weight: bold;
+}
+
+body:not(.claro) #toggleTema {
+    border-color: #ffffff !important;
+    color: #ffffff !important;
+}
+
+/* TRANSICIONES GLOBALES */
+* {
+    transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+}
+
+/* ANIMACIÓN DE TARJETAS */
+.card {
+    transform: translateY(0);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+}
+
+/* ANIMACIÓN DE BOTONES */
+.btn {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+}
+
+.btn:active {
+    transform: scale(0.97);
+}
+
+/* ANIMACIÓN DE APARICIÓN */
+.tarea-animada {
+    opacity: 0;
+    animation: fadeIn 0.5s forwards;
+}
+
+@keyframes fadeIn {
+    to { opacity: 1; }
+}
+
+/* NAVBAR SUAVE */
+.navbar {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
